@@ -18,9 +18,15 @@ function DOMclick(){
     } else 
     counterDOM.innerHTML= counter -= 1
     */
+  
+    /*
    //--------------------YÖNTEM 2-------------------
+   
     this.id == "increase" ? counterDOM.innerHTML = counter += 1 : counterDOM.innerHTML = counter -= 1; 
+    */
 
-
+    //-------------------YÖNTEM 3-------------------
+    this.id == "increase" ? counter += 1 : counter -= 1; 
+    counterDOM.innerHTML = counter
 
 }
