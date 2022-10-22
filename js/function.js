@@ -1,4 +1,4 @@
-let counter = 0;
+let counter = localStorage.getItem("counter") ? Number(localStorage.getItem("counter")) : 0;
 let counterDOM = document.querySelector("#caunter");
 let increaseDOM = document.querySelector("#increase");
 let decreaseDOM = document.querySelector("#decrease");
@@ -26,7 +26,13 @@ function DOMclick(){
     */
 
     //-------------------YÖNTEM 3-------------------
+    /*
     this.id == "increase" ? counter += 1 : counter -= 1; 
     counterDOM.innerHTML = counter
+    */
 
+    //-----------------localstroge-------------------
+    this.id == "increase" ? counter += 1 : counter -= 1; 
+    localStorage.setItem("counter" , counter);
+    counterDOM.innerHTML = counter;
 }
