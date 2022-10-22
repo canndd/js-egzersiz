@@ -11,11 +11,16 @@ decreaseDOM.addEventListener("click",DOMclick);
 function DOMclick(){
 
     console.log(this.id)
+   /*
+    // ------------------YÖNTEM 1------------------
     if(this.id == "increase"){
         counterDOM.innerHTML = counter +=1
     } else 
     counterDOM.innerHTML= counter -= 1
-        
+    */
+   //--------------------YÖNTEM 2-------------------
+    this.id == "increase" ? counterDOM.innerHTML = counter += 1 : counterDOM.innerHTML = counter -= 1; 
+
 
 
 }
